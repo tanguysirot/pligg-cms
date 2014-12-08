@@ -89,7 +89,8 @@
                 <br/>  
             </div>
             <div class="control-group">
-                <label class="control-label">{#PLIGG_Visual_Register_Numero_Secu#}</label>
+                <label class="control-label">{#PLIGG_Visual_Register_Numero_Secu#}
+                <i class="fa fa-asterisk text-danger"></i></label>
                 <div class="controls">
                     {if isset($form_numerosecu_error)}
                         { foreach value=error from=$form_numerosecu_error }
@@ -146,8 +147,8 @@
                         </div>
                         { /foreach }
                     {/if}
-                    <select autofocus="autofocus" type="text" class="form-control reg_pays" id="reg_pays" name="reg_pays" value="{if isset($reg_pays)}{$reg_pays}{/if}">
-                        <option value="France" selected="selected" {if isset($reg_pays)}{if $reg_pays=="Afghanistan"}{/if}selected="selected"{/if}>France </option>
+                    <select autofocus="autofocus" type="text" class="form-control reg_pays" id="reg_pays" name="reg_pays">
+                        <option value="France" {if isset($reg_pays)}{if $reg_pays=="France"}{/if}selected="selected"{/if}>France </option>
                         <option value="Afghanistan" {if isset($reg_pays)}{if $reg_pays=="Afghanistan"}{/if}selected="selected"{/if}>Afghanistan </option>
                         <option value="Afrique_Centrale" {if isset($reg_pays)}{if $reg_pays=="Afrique_Centrale"}{/if}selected="selected"{/if}>Afrique Centrale </option>
                         <option value="Afrique_du_sud" {if isset($reg_pays)}{if $reg_pays=="Afrique_du_sud"}{/if}selected="selected"{/if}>Afrique du Sud </option>
